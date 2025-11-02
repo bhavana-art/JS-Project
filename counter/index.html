@@ -1,0 +1,96 @@
+
+<!-- What learn :-  assign value using TextContent-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter </title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background-color: rgb(204, 247, 247);
+        }
+         .container{
+            width: 300px;
+            height: 300px;
+            margin: 50px;
+            padding: 40px;
+            background-color: white;
+         }
+         button{
+            height: 30px;
+            width: 100px;
+            padding: 5px;
+            margin-left: 30px;
+            margin-top: 50px;
+            cursor: pointer;
+         }
+         .text{
+            margin-top: 40px;
+         }
+         #text2{
+            margin-top: 15px;
+         }
+         #output{
+            margin-top: 30px;
+            font-size: 30px;
+            text-align: center;
+         }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div id="output">
+      0
+    </div>
+
+    <button id="btn1">
+    Increment
+    </button>
+
+    <button id="btn2">
+        Decrement
+    </button>
+    <div class="text">
+    <div id="text1">Clicks on Increment : <span id="textinc">0</span>    </div>
+    <div id="text2">Clicks on Decrement :  <span id="textdec">0</span>   </div>
+    </div>
+</div>
+
+<script>
+    let no = 0;
+    let inclick = 0;
+    let declick = 0;
+
+    let output = document.getElementById('output');
+    let btn1 = document.getElementById('btn1');
+    let btn2 = document.getElementById('btn2');
+    
+    let text1 = document.getElementById('textinc');
+    let text2 = document.getElementById('textdec');
+
+    btn1.addEventListener("click" , e=>{
+        
+        //   no = output;
+          no++;
+          inclick++;
+        //   text1 = no;
+        output.textContent = no;
+        text1.textContent = inclick;
+
+    });
+
+    btn2.addEventListener("click",e =>{
+   no--;
+   declick++;
+   output.textContent = no;
+   text2.textContent = declick;   
+    });
+</script>
+</body>
+</html>
